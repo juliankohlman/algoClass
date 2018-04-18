@@ -10,7 +10,6 @@ Note that there is a natural order. Elements are removed in the reverse order of
 DO NOT use an array and the native push/pop method in your implementation. That's too easy, yeah? =P
 Use an object as the underlying data structure.
 
-
 *** Operations:
 
 myStack.push(value)
@@ -48,32 +47,56 @@ What's the time complexity?
 
 
 
- */
+*/
+class Stack {
+  constructor(capacity) {
+    this.capacity = capacity;
+    this.storage = {};
+    this.count = 0;
+  }
 
-function Stack(capacity) {
-  // implement me...
+  // myStack.push(value)
+  // => count of stack
+  // add value to collection
+  push(value) {
+    this.storage[this.count++] = value;
+    return this.count;
+  }
+  // Time complexity:
+
+  // myStack.pop()
+  // => most recent element added collection
+  // Remove item so that it is no longer in collection
+  pop() {
+    const top = this.count;
+    delete this.storage[top];  
+  }
+  // // Time complexity:
 }
 
-Stack.prototype.push = function(value) {
-  // implement me...
-};
-// Time complexity:
+// Stack.prototype.push = function(value) {
+//   // implement me...
+// };
 
-Stack.prototype.pop = function() {
-  // implement me...
-};
-// Time complexity:
+// Stack.prototype.pop = function() {
+//   // implement me...
+// };
 
-Stack.prototype.peek = function() {
-  // implement me...
-};
-// Time complexity:
+// Stack.prototype.peek = function() {
+//   // implement me...
+// };
+// // Time complexity:
 
-Stack.prototype.count = function() {
-  // implement me...
-};
-// Time complexity:
+// Stack.prototype.count = function() {
+//   // implement me...
+// };
 
+const a = new Stack(5);
+console.log(a);
+console.log(a.push('hi'));
+console.log(a);
+
+// Time complexity:
 
 /*
 *** Exercises:
@@ -87,9 +110,12 @@ Ex: balancedParens( 'sqrt(5*(3+8)/(4-2))' ) => true
 Ex: balancedParens( 'Math.min(5,(6-3))(' ) => false
 
 4. Towers of Hanoi - https://en.wikipedia.org/wiki/Tower_of_Hanoi
-You are given three towers (stacks) and N disks, each of different size. You can move the disks according to three constraints:
+You are given three towers (stacks) and N disks, each of different size.
+You can move the disks according to three constraints:
    1. only one disk can be moved at a time
-   2. when moving a disk, you can only use pop (remove the top element) and push (add to the top of a stack)
-   3. no disk can be placed on top of a disk that is smaller than it
-The disks begin on tower#1. Write a function that will move the disks from tower#1 to tower#3 in such a way that none of the constraints are violated.
+   2. when moving a disk, you can only use pop (remove the top element)
+      and push (add to the top of a stack)
+   3. no disk can be placed on top of a disk that is smaller than it The
+      disks begin on tower #1. Write a function that will move the disks
+      from tower#1 to tower#3 in such a way that none of the constraints are violated.
  */
