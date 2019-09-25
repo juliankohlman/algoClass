@@ -69,7 +69,7 @@ class Stack {
   // Remove item so that it is no longer in collection
   pop() {
     const top = this.count;
-    delete this.storage[top];  
+    delete this.storage[top];
   }
   // // Time complexity:
 }

@@ -77,11 +77,11 @@ Reimplement stack and queue data structures using linked lists.
 
  */
 
-
 // PART 1
 
 function Node(value) {
   this.next = null;
+  this.prev = null;
   this.value = value;
 }
 
@@ -117,7 +117,7 @@ LinkedList.prototype.insertHead = function(value) {
 
 LinkedList.prototype.removeHead = function() {
   // implement me...
-}
+};
 
 LinkedList.prototype.findNode = function(value) {
   // implement me...
@@ -128,7 +128,6 @@ LinkedList.prototype.appendToTail = function(value) {
   // implement me...
 };
 // Time complexity:
-
 
 // PART 2:
 
@@ -141,8 +140,6 @@ LinkedList.prototype.removeBefore = function(node) {
   // implement me...
 };
 // Time complexity:
-
-
 
 /*
 *** Exercises:
