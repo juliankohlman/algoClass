@@ -76,7 +76,7 @@ Reimplement stack and queue data structures using linked lists.
 
 
  */
-
+// Todo convert to a Doubly-linked-list and complete exercises from Cormen text
 // PART 1
 
 function Node(value) {
