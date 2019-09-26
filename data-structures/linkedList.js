@@ -74,6 +74,7 @@ https://en.wikipedia.org/wiki/Linked_list#Circularly_linked_list
 
 Reimplement stack and queue data structures using linked lists.
 
+? 1. Can You implement the dynamic-set operation INSERT and DELETE on a single linked list in 0(1) time?
 
  */
 // Todo convert to a Doubly-linked-list and complete exercises from Cormen text
@@ -92,13 +93,31 @@ function LinkedList(headValue) {
 
 LinkedList.prototype.forEach = function(callback) {
   // implement me...
+  // myList.forEach(callbackFn)
+  // invoke callback function with the value of each node
+  let currentNode = this.head;
+  while (currentNode) {
+    callback(currentNode);
+    currentNode = currentNode.next;
+  }
 };
 // Time complexity:
+const newList = new LinkedList(4);
 
 LinkedList.prototype.print = function() {
   // implement me...
+  // myList.print()
+  // => string with all values in list (ex: '0, 1, 2, 3')
+  let string = '';
+  let currentNode = this.head;
+  while (currentNode) {
+    string += `${currentNode.value}`;
+    currentNode = currentNode.next;
+  }
+  console.log(string);
 };
 // Time complexity:
+newList.print();
 
 LinkedList.prototype.insertAfter = function(node, value) {
   // implement me...
