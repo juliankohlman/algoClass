@@ -73,9 +73,14 @@ Implement a circularly linked list:
 https://en.wikipedia.org/wiki/Linked_list#Circularly_linked_list
 
 Reimplement stack and queue data structures using linked lists.
-
+//* Linked List Cormen exercises
 ? 1. Can You implement the dynamic-set operation INSERT and DELETE on a single linked list in 0(1) time?
-
+? 2. Implement a stack using a singly linked list L. The operations PUSH and POP should still take O.1/ time.
+? 3. Implement a queue by a singly linked list L. The operations ENQUEUE and DE- QUEUE should still take O.1/ time.
+? 4. As written, each loop iteration in the LIST-SEARCH0 procedure requires two tests: one for x ¤ L:nil and one for x:key ¤ k. Show how to eliminate the test for x ¤ L:nil in each iteration.
+? 5. Implement the dictionary operations INSERT, DELETE, and SEARCH using singly linked, circular lists. What are the running times of your procedures?
+? 6. The dynamic-set operation UNION takes two disjoint sets S1 and S2 as input, and it returns a set S D S1 [ S2 consisting of all the elements of S1 and S2. The sets S1 and S2 are usually destroyed by the operation. Show how to support UNION in O.1/ time using a suitable list data structure.
+? 7. Give a ‚.n/-time nonrecursive procedure that reverses a singly linked list of n elements. The procedure should use no more than constant storage beyond that needed for the list itself.
  */
 // Todo convert to a Doubly-linked-list and complete exercises from Cormen text
 // PART 1
